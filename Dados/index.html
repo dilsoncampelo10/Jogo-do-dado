@@ -5,10 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo do dado</title>
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <h1>Professor José de Assis - Aula 6</h1>
-    <input type="number" name="palpite" id="caixaPalpite">
-    <img src="imagens/face1.png" alt="imagem do dado">
+    <main>
+        <h1>Professor José de Assis - Aula 6</h1>
+        <section id="interativos">
+            <label for="palpite">Seu palpite</label>
+            <input type="number" name="palpite" id="caixaPalpite" min="1" max="6">
+            <input type="button" value="Sorte">
+        </section>
+        <section id="imagens">
+            <img src="imagens/face1.png" alt="imagem do dado">
+        </section>
+    </main>
 </body>
 </html>
