@@ -2,31 +2,47 @@
  * Jogo de dados
  * @autor Dilson Campêlo
  */
+var resultado
+var numeroResult
+
 function randomNumber(){
     var dado = document.getElementById('face')
-    var numeros = Math.floor(Math.random()*6+1)
+    let numeros = Math.floor(Math.random()*6+1)
     switch (numeros){
         case 1: 
-            dado.src = 'imagens/face1.png'
+            resultado = `face1`
+            numeroResult = 1
             break
         case 2:
-            dado.src = 'imagens/face2.png'
+            resultado = `face2`
+            numeroResult = 2
             break
         case 3: 
-            dado.src = 'imagens/face3.png'
+            resultado = `face3`
+            numeroResult = 3
             break
         case 4:
-            dado.src = 'imagens/face4.png'
+            resultado = `face4`
+            numeroResult = 4
             break
         case 5:
-            dado.src = 'imagens/face5.png'
+            resultado = `face5`
+            numeroResult = 5
             break
         case 6:
-            dado.src = 'imagens/face6.png'
+            resultado = `face6`
+            numeroResult = 6
             break
         default:
             break;
     }
+    dado.src = `imagens/${resultado}.png`
+    win()
 }
-
+function win(){
+    let palpite= document.getElementById('caixaPalpite')
+    if(palpite.value== numeroResult){
+        alert("Parabéns, você acertou!")
+    }
+}
 
